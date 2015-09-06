@@ -150,6 +150,7 @@ Key:
                   (gzdopen (file-descriptor designator) mode)
                   (gzopen (pathstring filespec) mode)))
          (gz (make-gz :ptr ptr :open-p t)))
+    (gzbuffer (gz-ptr gz) 262144)
     (if (null-pointer-p (gz-ptr gz))
         (gz-error gz t (format nil "failed to open ~a (~a)"
                                filespec (gz-error-message gz)))
