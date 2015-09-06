@@ -88,6 +88,7 @@
    #:gzgets
    #:gzputs
    #:gzerror
+   #:gzbuffer
 
    #:*c-error-number*)
   (:documentation "The zlib-ffi package provides a FFI for most of
