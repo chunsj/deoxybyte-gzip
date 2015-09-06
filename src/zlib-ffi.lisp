@@ -242,3 +242,7 @@
 (defcfun ("gzerror" gzerror) :string
   (gz :pointer)
   (errnum :pointer))
+
+(defcfun ("gzbuffer" gzbuffer) :int
+  (gz :pointer)
+  (len :int))
